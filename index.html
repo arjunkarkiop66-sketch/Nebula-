@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NEBULA — Anime Universe</title>
+<style>
+:root{--bg:#070711;--card:#11111f;--muted:#a6a6bb;--text:#f5f5ff;--accent:#9b5cff;--accent2:#ff4fa3}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,#24104a 0,transparent 35%),var(--bg);color:var(--text);font-family:Inter,system-ui,Arial,sans-serif}
+nav{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 6%;position:sticky;top:0;z-index:10;background:#070711cc;backdrop-filter:blur(16px);border-bottom:1px solid #ffffff10}
+.logo{font-size:24px;font-weight:900;letter-spacing:2px}.logo span{color:var(--accent)}
+nav a{color:#ddd;text-decoration:none;margin:0 14px;font-size:14px}button{border:0;border-radius:999px;padding:12px 18px;font-weight:800;cursor:pointer}
+.hero{min-height:560px;padding:90px 7%;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 0%,#070711cc 45%,transparent 100%);z-index:0}
+.hero-content{position:relative;z-index:1;max-width:650px}.eyebrow{color:#c39bff;font-weight:800;letter-spacing:3px;font-size:12px}.hero h1{font-size:clamp(48px,8vw,92px);line-height:.9;margin:16px 0}.hero h1 span{color:var(--accent2)}.hero p{color:#c7c7d8;max-width:540px;line-height:1.7}.cta{background:var(--text);color:#09090f;margin-right:8px}.ghost{background:#ffffff12;color:white;border:1px solid #ffffff20}
+.hero-art{position:absolute;right:3%;top:8%;width:52%;height:90%;background:linear-gradient(145deg,#4a1c75,#10102b 48%,#8b255d);clip-path:polygon(24% 0,100% 0,100% 100%,0 100%);opacity:.75;border-radius:30px;transform:skewX(-4deg)}
+section{padding:40px 7%}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:22px}.section-head h2{margin:0;font-size:28px}.section-head small{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}.card{background:linear-gradient(180deg,#171728,#0e0e19);border:1px solid #ffffff10;border-radius:18px;overflow:hidden;transition:.25s;cursor:pointer}.card:hover{transform:translateY(-7px);border-color:#9b5cff66}.poster{height:260px;display:flex;align-items:end;padding:15px;font-size:34px;font-weight:900;background:linear-gradient(145deg,#241247,#ff4fa333)}.poster.p2{background:linear-gradient(145deg,#062d35,#00c6a733)}.poster.p3{background:linear-gradient(145deg,#39120c,#ff8a0033)}.poster.p4{background:linear-gradient(145deg,#172449,#4e7dff44)}.poster.p5{background:linear-gradient(145deg,#32112e,#ff54d644)}.card-body{padding:14px}.card h3{margin:0 0 6px}.meta{color:var(--muted);font-size:12px}.tag{display:inline-block;margin-top:10px;background:#ffffff0d;padding:5px 8px;border-radius:7px;font-size:11px}
+.search{width:min(420px,100%);background:#ffffff0b;border:1px solid #ffffff15;border-radius:999px;padding:13px 18px;color:white;outline:none}.search:focus{border-color:#9b5cff}
+.banner{margin:30px 7%;padding:30px;border-radius:22px;background:linear-gradient(110deg,#8c3cff,#ff4fa3);display:flex;justify-content:space-between;align-items:center;gap:20px}.banner h2{margin:0}.banner p{margin:6px 0 0;color:#fff9}
+footer{padding:40px 7%;color:#77778c;border-top:1px solid #ffffff0b;text-align:center}
+@media(max-width:700px){nav a{display:none}.hero{min-height:520px;padding-top:60px}.hero-art{width:100%;right:-25%;opacity:.3}.banner{margin:20px 5%;flex-direction:column;align-items:flex-start}}
+</style></head>
+<body>
+<nav><div class="logo">NEBULA<span>✦</span></div><div><a href="#home">Home</a><a href="#anime">Anime</a><a href="#genres">Genres</a></div><button onclick="document.getElementById('anime').scrollIntoView({behavior:'smooth'})">Explore</button></nav>
+<main id="home">
+<div class="hero"><div class="hero-art"></div><div class="hero-content"><div class="eyebrow">WELCOME TO THE NEXT DIMENSION</div><h1>ENTER THE<br><span>ANIME</span>VERSE.</h1><p>Discover legendary heroes, impossible worlds, and stories that stay with you. Your next obsession starts here.</p><button class="cta" onclick="alert('Welcome to NEBULA!')">Start Watching ▶</button><button class="ghost" onclick="document.getElementById('anime').scrollIntoView({behavior:'smooth'})">Browse Library</button></div></div>
+<section id="anime"><div class="section-head"><div><small>CURATED FOR YOU</small><h2>Trending Now</h2></div><input class="search" id="search" placeholder="Search anime..."></div>
+<div class="grid" id="grid">
+<article class="card" data-name="Attack on Titan"><div class="poster">AOT</div><div class="card-body"><h3>Attack on Titan</h3><div class="meta">Action · Dark Fantasy · 9.8</div><span class="tag">Legendary</span></div></article>
+<article class="card" data-name="Demon Slayer"><div class="poster p2">DS</div><div class="card-body"><h3>Demon Slayer</h3><div class="meta">Action · Fantasy · 9.4</div><span class="tag">Popular</span></div></article>
+<article class="card" data-name="Chainsaw Man"><div class="poster p3">CSM</div><div class="card-body"><h3>Chainsaw Man</h3><div class="meta">Action · Supernatural · 9.1</div><span class="tag">Hot</span></div></article>
+<article class="card" data-name="Bleach"><div class="poster p4">BLEACH</div><div class="card-body"><h3>Bleach</h3><div class="meta">Action · Shonen · 9.3</div><span class="tag">Classic</span></div></article>
+<article class="card" data-name="Jujutsu Kaisen"><div class="poster p5">JJK</div><div class="card-body"><h3>Jujutsu Kaisen</h3><div class="meta">Action · Supernatural · 9.5</div><span class="tag">Trending</span></div></article>
+</div></section>
+<div class="banner"><div><h2>Your watchlist is waiting.</h2><p>Save your favorites and build your perfect anime night.</p></div><button class="cta" onclick="alert('Watchlist feature coming soon!')">Create List +</button></div>
+<section id="genres"><div class="section-head"><div><small>FIND YOUR VIBE</small><h2>Popular Genres</h2></div></div><div class="grid">
+<div class="card"><div class="card-body"><h3>⚔️ Shonen</h3><div class="meta">Power, rivalry, adventure</div></div></div>
+<div class="card"><div class="card-body"><h3>🌙 Dark Fantasy</h3><div class="meta">Mystery, monsters, survival</div></div></div>
+<div class="card"><div class="card-body"><h3>💫 Romance</h3><div class="meta">Love, drama, feelings</div></div></div>
+<div class="card"><div class="card-body"><h3>🚀 Sci-Fi</h3><div class="meta">Future worlds, technology</div></div></div>
+</div></section>
+</main><footer>NEBULA ✦ Made for anime fans · A fan-made demo website</footer>
+<script>
+const input=document.getElementById('search'), cards=[...document.querySelectorAll('.card[data-name]')];
+input.addEventListener('input',()=>{const q=input.value.toLowerCase();cards.forEach(c=>c.style.display=c.dataset.name.toLowerCase().includes(q)?'block':'none')});
+cards.forEach(c=>c.addEventListener('click',()=>alert('You selected '+c.dataset.name+'!')));
+</script>
+</body></html>
